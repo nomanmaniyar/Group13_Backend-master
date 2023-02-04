@@ -1,0 +1,75 @@
+USER::::::::
+
+
+Register
+POST URI format: http://localhost:4000/cibo/foodAdda/user/register
+
+Body:
+{
+	"userName":"Sayan",
+	"emailId":"Sayan@infy.com,
+	"contactNumber":"7003200920",
+	"password":"Sayan@123",
+	"roles":[{
+		"roleType":"CUSTOMER"}]
+}
+
+...............................................................
+
+Authentication
+URI FORMAT:  http://localhost:4000/cibo/foodAdda/user/auth
+
+BODY:
+{
+	"contactNumber":"7003200920",
+	"password":"Sayan@123"
+}
+...............................................................
+
+ADD user Address
+POST URI format:  http://localhost:4000/cibo/foodAdda/user/addAddress/{userId}
+
+BODY:
+{
+"userAddressName":"Home",
+	"addressLine1":"350",
+	"addressLine2":"Hebbal",
+	"area":"Electronic City",
+	"city":"Mysuru",
+	"userState":"Karnataka",
+	"pincode":"520027"}
+
+
+.............................................................
+
+UPDATE ADDRESS
+PUT URI FORMAT:http://localhost:4000/cibo/foodAdda/user/updateAddress/{userId}
+
+BODY:
+{
+	"userAddressId":7,
+	"userAddressName":"Home",
+	"addressLine1":"350",
+	"addressLine2":"Hebbal",
+	"area":"Electronic City",
+	"city":"Mysuru",
+	"userState":"Karnataka",
+	"pincode":"520027"}
+
+.............................................................
+
+DELETE ADDRESS
+DELETE URI FORMAT : http://localhost:4000/cibo/foodAdda/user/deleteAddress/{userId}/{addressId}
+
+BODY
+{}
+
+
+.................................................................
+
+
+GET RECOMENDATION BY AREA
+URI FORMAT: http://localhost:4000/cibo/nearbyRestaurant/{area}
+
+BODY:
+{}
